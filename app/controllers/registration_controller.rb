@@ -6,6 +6,7 @@ class RegistrationController < ApplicationController
     def create
         @user = User.create(user_params)
         if @user.save
+            session[:user_id] = @user.id
             redirect_to root_path, success: "Successfully created account"
         else
              render :new, status: :unprocessable_entity
