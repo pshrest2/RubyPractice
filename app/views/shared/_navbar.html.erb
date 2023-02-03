@@ -20,10 +20,15 @@
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <% if Current.user %>
-          <li class="nav-item">
-            <span class="navbar-text">
-              <%= Current.user.email %>
-            </span>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><span class="dropdown-item disabled"><%= Current.user.email %></span></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to "Update Password", password_path, class: "dropdown-item" %></li>
+            </ul>
           </li>
           <li class="nav-item">
             <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-secondary"%>
