@@ -9,7 +9,7 @@
   <% end %>
   <div class="mb-3">
     <%= form.label "Current Password", class: "form-label" %>
-    <%= form.password_field :password, class: "form-control", placeholder: "Enter current password", required: true %>
+    <%= form.password_field :current_password, class: "form-control", placeholder: "Enter current password", required: true %>
   </div>
   <div class="mb-3">
     <%= form.label "New Password", class: "form-label" %>
@@ -17,7 +17,7 @@
   </div>
   <div class="mb-3">
     <%= form.label "New Password Confirm", class: "form-label" %>
-    <%= form.password_field :new_password, class: "form-control", placeholder: "Enter new password again", required: true %>
+    <%= form.password_field :new_password_confirmation, class: "form-control", placeholder: "Enter new password again", required: true %>
   </div>
   <%= form.submit "Update", class: "btn btn-secondary" %>
 <% end %>
