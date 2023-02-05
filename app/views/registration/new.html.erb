@@ -1,8 +1,8 @@
 <h1>Register</h1>
-<%= form_with model: Current.user, url: register_path do |form| %>
-  <% if form.object.errors.any? %>
+<%= form_with model: @user, url: register_path do |form| %>
+  <% if @user.errors.any? %>
     <div class="alert alert-danger">
-      <% form.object.errors.full_messages.each do |message| %>
+      <% @user.errors.full_messages.each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
