@@ -8,5 +8,8 @@
     <%= form.label "Password", class: "form-label" %>
     <%= form.password_field :password, class: "form-control", placeholder: "Enter password here" %>
   </div>
+  <div class="mb-3">
+    <%= link_to "Forgot your password?", password_reset_path %>
+  </div>
   <%= form.submit "Login", class: "btn btn-primary" %>
 <% end %>
